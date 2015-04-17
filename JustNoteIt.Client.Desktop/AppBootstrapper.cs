@@ -47,6 +47,11 @@ namespace JustNoteIt.Client.Desktop
         protected override void Configure()
         {
             base.Configure();
+
+            _Kernel.Bind<IWindowManager>().To<WindowManager>().InSingletonScope();
+            _Kernel.Bind<IEventAggregator>().To<EventAggregator>().InSingletonScope();
+
+            _Kernel.Bind<JournalViewModel>().ToSelf().InSingletonScope();
         }
 
         protected override void OnExit(object sender, EventArgs e)

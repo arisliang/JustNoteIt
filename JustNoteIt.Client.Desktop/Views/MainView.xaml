@@ -8,6 +8,6 @@
         d:DataContext="{x:Type model:MainViewModel}"
         Title="{Binding WindowTitle}" Height="300" Width="300">
     <Grid>
-        
+        <ContentControl x:Name="JournalVM" />
     </Grid>
 </Window>
